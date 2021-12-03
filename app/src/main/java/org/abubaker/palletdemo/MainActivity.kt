@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity() {
                                 val intColor = it.vibrantSwatch?.rgb ?: 0
 
                                 // Change background color based on the fetched RGB value
+                                // setBackgroundColor requires an Int value, and our rgb() is already returning result as an integer value
                                 binding.targetTheme.setBackgroundColor(intColor)
                             }
 
