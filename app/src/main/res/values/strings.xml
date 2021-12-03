@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PalletDemo</string>
+    <string name="reference_image">Reference Image</string>
 </resources>
