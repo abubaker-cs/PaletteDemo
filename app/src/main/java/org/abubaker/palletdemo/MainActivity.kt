@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
-                // Success: Load time thumbnail in our ImageView
+                // Success: Generate Color from our reference image and apply it as a BackgroundColor to the target Object.
                 override fun onResourceReady(
                     resource: Drawable,
                     model: Any?,
