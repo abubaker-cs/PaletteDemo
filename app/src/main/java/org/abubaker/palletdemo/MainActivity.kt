@@ -59,14 +59,26 @@ class MainActivity : AppCompatActivity() {
                     isFirstResource: Boolean
                 ): Boolean {
 
-                    // Once the resource is ready generate the Palette from the bitmap of image.
+                    // Once the resource (Drawable Image) is ready generate the Palette from the bitmap of image.
                     Palette.from(resource.toBitmap())
+
+                        // We are GENERATING colors from the bitmap
                         .generate { palette ->
 
                             // Get the vibrantSwatch color from the image and set it to the parent layout background.
                             palette?.let {
 
                                 // Store the RGB value instead the intColor variable
+                                /**
+                                 * Type of Swatches:
+                                 *
+                                 *
+                                 * If it is a value then use it, otherwise use 0
+                                 *
+                                 * vibrantSwatch = Returns the most vibrant swatch in the palette.
+                                 * Might be null, that's why we need to check if it is NULL using:
+                                 *          it.vibrantSwatch?.rgb ?: 0
+                                 */
                                 val intColor = it.vibrantSwatch?.rgb ?: 0
 
                                 // Change background color based on the fetched RGB value
